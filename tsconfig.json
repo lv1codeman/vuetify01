@@ -5,7 +5,8 @@
     "lib": ["DOM", "ESNext"],
     "baseUrl": ".",
     "module": "ESNext",
-    "moduleResolution": "bundler",
+    // "moduleResolution": "bundler",
+    "moduleResolution": "node",
     "paths": {
       "@/*": ["src/*"]
     },
@@ -24,7 +25,14 @@
     "isolatedModules": true,
     "skipLibCheck": true
   },
-  "include": ["./src/typed-router.d.ts"],
+  "include": [
+    "./src/typed-router.d.ts",
+    "./.dot/**/*.vue",
+    "./dot/**/*.vue",
+    "./src/**/*.vue",
+    "./src/*.vue",
+    "./src/*.ts"
+  ],
   "exclude": ["dist", "node_modules", "cypress"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
